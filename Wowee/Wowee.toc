@@ -1,0 +1,7 @@
+## Interface: 80200
+##Title: Wowee
+##Author: Lanille
+## Version: 0.2
+
+WoweeResponses.lua
+WoweeCore.lua
