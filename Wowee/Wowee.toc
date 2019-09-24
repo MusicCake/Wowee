@@ -3,5 +3,6 @@
 ##Author: Lanille
 ## Version: 0.2
 
+MotivateMe.lua
 WoweeResponses.lua
 WoweeCore.lua
