@@ -82,6 +82,42 @@ local function WoweeHandler(self, event, msg, author, ...)
 		--print(GetWoweeResponse(num));
 		SendChatMessage(GetWoweeResponse(num), "GUILD");
 		
+	elseif msg == '!Doom' and (string.find(author, serverA, (string.len(author) - lengthA)) or string.find(author, serverB, (string.len(author) - lengthB))) then
+	
+		print('Cursed Handler Activated by '..author..'!');
+	
+		local server = "";
+	
+		if string.find(author, serverA, (string.len(author) - lengthA)) then
+		
+			server = serverA;
+			
+		elseif string.find(author, serverB, (string.len(author) - lengthB)) then
+		
+			server = serverB;
+			
+		end
+	
+		--print(author);
+		--print('Length of \"author\": '..string.len(author));
+		--print('Length of \"server\": '..string.len(server));
+		--print(string.sub(author, 1, string.len(author) - string.len(server)));
+		local name= string.sub(author, 1, string.len(author) - (string.len(server) + 1));
+		--print(name);
+		
+		--print(tostring(math.random()));
+		math.random();
+	
+		--print(tostring(GetWoweeCollectionSize()));
+		local num = math.random(GetDoomCollectionSize());
+		--print(tostring(num));
+	
+		--print(name..' wants to be Wowee\'d!');
+		SendChatMessage(name..' asks to be Cursed!', "GUILD");
+	
+		--print(GetWoweeResponse(num));
+		SendChatMessage(GetDoomResponse(num), "GUILD");
+		
 	end
 		
 end

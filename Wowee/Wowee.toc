@@ -5,4 +5,5 @@
 
 MotivateMe.lua
 WoweeResponses.lua
+DoomResponses.lua
 WoweeCore.lua
