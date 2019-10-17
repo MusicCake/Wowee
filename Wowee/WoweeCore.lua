@@ -77,10 +77,10 @@ local function WoweeHandler(self, event, msg, author, ...)
 		--print(tostring(num));
 	
 		--print(name..' wants to be Wowee\'d!');
-		SendChatMessage(name..' asks to be Wowee\'d!', "GUILD");
+		SendChatMessage('You asked to be Wowee\'d!', "WHISPER", nil, name);
 	
 		--print(GetWoweeResponse(num));
-		SendChatMessage(GetWoweeResponse(num), "GUILD");
+		SendChatMessage(GetWoweeResponse(num), "WHISPER", nil, name);
 		
 	elseif msg == '!Doom' and (string.find(author, serverA, (string.len(author) - lengthA)) or string.find(author, serverB, (string.len(author) - lengthB))) then
 	
